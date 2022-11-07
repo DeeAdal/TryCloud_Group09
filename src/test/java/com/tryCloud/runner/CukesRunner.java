@@ -11,9 +11,9 @@ import org.junit.runner.RunWith;
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber"
                 },
         features = "src/test/resources/features",
-        glue = "src/test/java/com/tryCloud/step_defs",
+        glue = "com/tryCloud/step_defs",
         dryRun = false,
-        tags = ""
+        tags = "@wip"
 )
 
 public class CukesRunner {
