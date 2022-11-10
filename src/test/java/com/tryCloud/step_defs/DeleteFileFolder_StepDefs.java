@@ -11,20 +11,22 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DeleteFileFolder_StepDefs {
     DeleteFileFolderPage deleteFileFolderPage = new DeleteFileFolderPage();
-    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
+    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 30);
 
 
     @When("user click action-icon from any file on the page")
     public void user_click_action_icon_from_any_file_on_the_page() {
-        wait.until(ExpectedConditions.visibilityOf(deleteFileFolderPage.addNotesListOrLinks));
+        wait.until(ExpectedConditions.visibilityOf(deleteFileFolderPage.plusButton));
+        BrowserUtils.hover(deleteFileFolderPage.actions);
         deleteFileFolderPage.actions.click();
-        wait.until(ExpectedConditions.visibilityOf(deleteFileFolderPage.deleteButton));
+     wait.until(ExpectedConditions.visibilityOf(deleteFileFolderPage.deleteButton));
 
     }
 
     @When("user choose the {string} option")
     public void user_choose_the_option(String string) {
-        BrowserUtils.hover(deleteFileFolderPage.deleteButton);
+
+  //      BrowserUtils.hover(deleteFileFolderPage.deleteButton);
         deleteFileFolderPage.deleteButtonClicking(string);
 
     }
