@@ -13,7 +13,7 @@ public class DeleteFileFolderPage {
     @FindBy(xpath = "(//a[@class='action action-menu permanent']//span)[1]")
     public WebElement actions;
 
-    @FindBy(xpath = "//span[.='Delete folder']")
+    @FindBy(xpath = "(//span[.='Delete file'])[1]")
     public WebElement deleteButton;
 
     @FindBy(xpath = "//a[.='Deleted files']")
@@ -22,8 +22,8 @@ public class DeleteFileFolderPage {
     @FindBy(xpath = "//div[@id='rightClickDetector']")
     public WebElement deletedFileInDeletedBin;
 
-    @FindBy(xpath = "//div[@class='ProseMirror']/p")
-    public WebElement addNotesListOrLinks;
+    @FindBy(xpath = "//a[@class='button new']")
+    public WebElement plusButton;
 
     public void deletedFilesClick(String s1){
         if (deletedFiles.getText().contains(s1)){
