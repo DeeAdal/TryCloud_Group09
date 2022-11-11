@@ -1,6 +1,6 @@
 Feature: As a user, I should be able to access to contacts module.
 
-  @wip
+
   Scenario Outline: User will go to TryCloud site
     Given User on tryCloud login page
     When user enters "<userName>"
