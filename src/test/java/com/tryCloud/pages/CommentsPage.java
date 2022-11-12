@@ -12,25 +12,29 @@ public class CommentsPage {
         PageFactory.initElements(Driver.getDriver(), this);
 
     }
+    @FindBy(xpath = "//a[@class='nav-icon-files svg active']")
+    public WebElement allFilesBtn;
 
-
-    @FindBy(xpath = "(//a[@class='action action-menu permanent open']/span)[1]")
+    @FindBy (xpath  ="(//a[@class='action action-menu permanent']//span)[1]")
     public WebElement actionIcon;
 
-    @FindBy(xpath = "//span[text()='Details']")
+
+    @FindBy(xpath = "//span[.='Details']")
     public WebElement detailsOption;
 
-    @FindBy(xpath = "//span[@class='app-sidebar-tabs__tab-icon icon-comment']")
+
+    @FindBy(xpath = "//a[@id='commentsTabView']")
     public WebElement commentButton;
 
-    @FindBy(xpath = "//input[@class='submit icon-confirm has-tooltip']")
+
+    @FindBy(xpath ="//div[@data-placeholder='New comment …']")
+    public WebElement newComment;
+
+
+    @FindBy(xpath = "(//input[@type='submit'])[2]")
     public WebElement submitButton;
 
-    @FindBy(xpath = "//div[@id='commentsTabView']//div/form")
-    public WebElement commentBox;
 
-    @FindBy(xpath = "(//div[.='good job'])[1]")
-    public WebElement postMessage;
 
 
 }
