@@ -12,10 +12,10 @@ public class CommentsPage {
         PageFactory.initElements(Driver.getDriver(), this);
 
     }
-    @FindBy(xpath = "//a[@class='nav-icon-files svg active']")
-    public WebElement allFilesBtn;
+    @FindBy(xpath = "//tr[@class='summary']")
+    public WebElement fileSummary;
 
-    @FindBy (xpath  ="(//a[@class='action action-menu permanent']//span)[1]")
+    @FindBy (xpath  ="//a[@class='action action-menu permanent']")
     public WebElement actionIcon;
 
 
@@ -23,7 +23,7 @@ public class CommentsPage {
     public WebElement detailsOption;
 
 
-    @FindBy(xpath = "//a[@id='commentsTabView']")
+    @FindBy(xpath = "//a[normalize-space()='Comments']")
     public WebElement commentButton;
 
 
