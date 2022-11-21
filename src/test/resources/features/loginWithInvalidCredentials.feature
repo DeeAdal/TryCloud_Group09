@@ -2,7 +2,7 @@ Feature: TryCloud Application login feature
   User Story:
   As a user, I should be able to log in. Verify user login fail with invalid credentials
 
-@wip
+@login
   Scenario Template: Log in as a user
     Given user on the TryCloud login page
     When user enters "<invalidUsername>" and enters "<invalidPassword>"

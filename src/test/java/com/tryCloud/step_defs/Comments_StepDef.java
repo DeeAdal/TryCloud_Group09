@@ -23,12 +23,14 @@ public class Comments_StepDef {
 
     }
 
-    @And("user choose the {string} option")
-    public void userChooseTheOption(String arg) {
+   /* @And("user choose the {string} option")
+   public void userChooseTheOption(String arg) {
         BrowserUtils.sleep(2);
         commentsPage.detailsOption.click();
 
     }
+
+    */
 
 
     @When("user write a comment inside the input box")

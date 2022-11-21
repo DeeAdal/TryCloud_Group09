@@ -14,7 +14,7 @@ public class LoginWithInvalidCredentials_StepDef {
     @Given("user on the TryCloud login page")
     public void user_on_the_try_cloud_login_page() {
 
-        Driver.getDriver().get("http://qa3.trycloud.net/index.php/login?clear=1");
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
     }
 
     @When("user enters {string} and enters {string}")
